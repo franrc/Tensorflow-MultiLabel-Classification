@@ -2,6 +2,8 @@
 
 Modified retrain.py script from tensorflow to allow multi-label image classification using pretrained Inception net. 
 
+It works on tensorflow 1.1.0 and above versions.
+
 Labels for classification are generated and used based on folder estructure. The images need to be putted on in this way: 
 
 * mobile
