@@ -17,14 +17,16 @@ Labels for classification are generated and used based on folder estructure. The
   * lg
     
 This example structure would generate this output_labels.txt
-    
-*mobile
-*samsung
-*xiaomi
-*huawey
-*tablet
-*tv
-*lg
+ 
+```
+mobile  
+samsung  
+xiaomi  
+huawey  
+tablet  
+tv  
+lg  
+```
 
 All the training images must be in JPG format.  
 
