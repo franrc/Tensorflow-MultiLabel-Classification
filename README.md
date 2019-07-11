@@ -8,15 +8,39 @@ Labels for classification are generated and used based on folder estructure. The
 
 * mobile
   * samsung
+    * image_mobile_samsung
+    * image_mobile_samsung
+    * ....
   * xiaomi
+    * image_mobile_xiaomi
+    * image_mobile_xiaomi
+    * ....
   * huawey
+    * image_mobile_huawey
+    * image_mobile_huawey
+    * ....
 * tablet
   * samsung
+    * image_tablet_samsung
+    * image_tablet_samsung
+    * ....
   * xiaomi
+    * image_tablet_xiaomi
+    * image_tablet_xiami
+    * ....
   * huawey
+    * image_tablet_huawey
+    * image_tablet_huawey
+    * ....
 * tv
   * samsung
+    * image_tv_samsung
+    * image_tv_samsung
+    * ....
   * lg
+    * image_tv_lg
+    * image_tv_lg
+    * ....
     
 This example structure would generate this output_labels.txt
  
@@ -29,6 +53,7 @@ tablet
 tv  
 lg  
 ```
+and will categorize the images onto each directory of the structure tree, for example 'image_tablet_samsung' will be trained as tablet and samsung categories.
 
 All the training images must be in JPG format.  
 
@@ -47,5 +72,12 @@ When the model has been trained, you can call this for check the traning:
   
 **python label_image.py --graph=tmp/output_graph.pb --labels=tmp/output_labels.txt --input_layer=Placeholder --output_layer=final_result --input_mean=128 --input_std=128 --input_width=224 --input_height=224 --image=images/.....**
   
-  
+This will return totally independent results for each label
 
+```
+tablet 99.35184121131897%
+samsung 98.91063570976257%
+mobile 3.713225945830345%
+xiaomi 2.3000916466116905%
+tv 1.0949322022497654%
+```
